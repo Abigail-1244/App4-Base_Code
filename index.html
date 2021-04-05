@@ -108,7 +108,7 @@ Known Issues:
 	</div>
 	
 	<div id="content" class="w3-container"> <!--start of content-->
-		<p>Do you have ear or tooth pain?</p> <!-- changed Question 2-->
+	<p>Do you have ear or tooth pain?</p> <!-- changed Question 2-->
 	<a href="#three"  onclick="migraineAdd();" class="w3-btn w3-black">No</a> <!--No for migraine button-->
 	<a href="#three"  onclick="sinusAdd();" class="w3-btn w3-black">Yes</a> <!--Yes for sinus button-->
 	</div> <!--end of page 2 question 2-->
@@ -119,22 +119,45 @@ Known Issues:
 	</div>
 	
 	<div id="content" class="w3-container"> <!--start of content-->
-		<p>Do you have a sore throat?</p> <!--Question 3-->
+	<p>Do you have a sore throat?</p> <!--Question 3-->
 	<a href="#four" onclick="sinusAdd();" class="w3-btn w3-black">Yes</a> <!--Yes for sinus button changed cold to sinus-->
 	<a href="#four" onclick="migraineAdd();" class="w3-btn w3-black">No</a> <!--No for migraine button changed allergy to migraine-->
 	</div> <!--end of page 3 question 3-->
 </div>
-<div class="page" id="four"> <!--start of page 4-->
-     	<div class="w3-container w3-flat-carrot">
+	<div class="page" id="four"> <!--start of page 4-->
+	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1> <!--header-->
 	</div>
 	
 	<div id="content" class="w3-container"> <!--start of content-->
-		<p>Have your symptoms lasted a few hours to three days?</p> <!--changed Question 4-->
+	<p>Do you have yellow mucus like nasal discharge?</p> <!--Changed Question 4-->
+	<a href="#five" onclick="sinusAdd();" class="w3-btn w3-black">Yes</a> <!--Yes for sinus button changed cold to sinus and directed it to Q5-->
+	<a href="#five" onclick="migraineAdd();" class="w3-btn w3-black">No</a> <!--No for migraine button changed allergy to migraine and directed it to Q5-->
+	</div> <!--end of page 4 question 4-->
+</div>
+	<div class="page" id="five"> <!--Added a page 5 start of page 5-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1> <!--header-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--start of content-->
+		<p>Are you experiencing sensory sensitivity?</p> <!--Added Question 5-->
+	<a href="#six" onclick="sinusAdd();" class="w3-btn w3-black">No</a> <!--No for sinus button-->
+	<a href="#six" onclick="migraineAdd();" class="w3-btn w3-black">Yes</a> <!--Yes for migraine button-->
+	</div> <!--end of page 3 question 3-->
+</div>
+<div class="page" id="six"> <!-- Added a page six start of page 6-->
+     	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1> <!--header-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--start of content-->
+		<p>Do you have a new feeling of confusion or difficulty speaking?</p> <!--Added Question 6-->
 	<a href="#resultsPage"  onclick="sinusAdd();" class="w3-btn w3-black"> No</a>  <!--No for sinus button-->
 	<a href="#resultsPage" onclick="migraineAdd();" class="w3-btn w3-black">Yes</a> <!--Yes for migraine button-->
 	</div>
 </div>
+	
 <div class="page" id="resultsPage"> <!--start of results page-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1> <!--header for results page-->
