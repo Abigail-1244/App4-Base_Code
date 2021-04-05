@@ -50,5 +50,106 @@ Known Issues:
 	var migrainePercent= (migraine_count / (migraine_count + sinus_count)) * 100; //equation for migraine
 	resultText.innerHTML = "Probability it is sinus =" + sinusPercent + "%" + "<br> Probability it is a migraine =" + migrainePercent + "%"; //results output as percentages
 	}	//end of function
-   </body>
+</script>	
+	
+	
+	
+<style> //copied style from other code
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target { 
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+	
+<body> <!--copied body from other code-->
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1> Sinus issue or migraine? </h1> <!--changed title-->
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Do you suffer from allergies and migraines, and wonder which one you are dealing with now? Answer a few short questions to find out!</p> <!--changed content-->
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one"> <!--start of Page 1-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1> <!--header-->
+	</div>
+	
+    	<div id="content" class="w3-container"> <!--start of content Question 1-->
+        <p>Are you eyes watery or itchy?</p>   <!--Question 1-->
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- Yes for allergies button-->
+	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--No for cold button-->
+    	</div> <!--end of page 1 question 1-->
+</div>
+
+<div class="page" id="two"> <!--start of page 2-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1> <!--header-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--start of content-->
+		<p>Do you have a fever?</p> <!--Question 2-->
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> <!--Yes for cold button-->
+	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--No for allergy button-->
+	</div> <!--end of page 2 question 2-->
+</div>	
+<div class="page" id="three"> <!--start of page 3-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1> <!--header-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--start of content-->
+		<p>Do you have a sore throat?</p> <!--Question 3-->
+	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a> <!--Yes for cold button-->
+	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--No for allergy button-->
+	</div> <!--end of page 3 question 3-->
+</div>
+<div class="page" id="four"> <!--start of page 4-->
+     	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1> <!--header-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--start of content-->
+		<p>Are your symptoms seasonal or chronic?</p> <!--Question 4-->
+	<a href="#resultsPage"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  <!--Yes for allergies button-->
+	<a href="#resultsPage" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--No for cold button-->
+	</div>
+</div>
+<div class="page" id="resultsPage"> <!--start of results page-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1> <!--header for results page-->
+	</div> <!-- starts  division for the content-->
+	
+	<div id="content" class="w3-container"> <!--start of content-->
+		<p id="results"></p> <!--results paragraph-->
+	<a onclick="resultsCalculator();" class="w3-btn w3-black"> Results here!</a> <!--results button with function-->
+		
+	</div> <!--end of results page-->
+</div>
+	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+</body>
 </html>
